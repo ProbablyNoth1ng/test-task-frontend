@@ -44,7 +44,7 @@ export const Main = () => {
                             <a href='#' className='text-[#B29F7E] font-semibold'>Forgot password?</a>
                         </div>
         
-                        <button type='submit' className=" mt-7 py-3 w-full text-white rounded-md bg-[#B29F7E] font-bold hover:bg-transparent hover:border-black  hover:border-2 text-[16px] leading-[22px]">Sign in</button>  
+                        <button type='submit' className=" mt-7 py-3 w-full text-white rounded-md bg-[#B29F7E] font-bold cursor-pointer hover:border-black hover:border-2  text-[16px] leading-[22px]">Sign up</button>  
                  
                         <div className='font-semibold flex justify-center pt-2'>Don’t have account? <a href="#" className='text-[#B29F7E] '>&nbsp; Sign Up</a> </div>
                     
