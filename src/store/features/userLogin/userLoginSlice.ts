@@ -10,7 +10,7 @@ const initialState: userLoginState = {
 }
 
 export const userLoginSlice = createSlice({
-  name: 'counter',
+  name: 'userLogin',
   initialState,
   reducers: {
     login: (state,action: PayloadAction<boolean> ) => {

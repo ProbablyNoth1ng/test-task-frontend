@@ -3,15 +3,21 @@ import type { RootState } from '../../../store/store';
 import { useSelector, useDispatch } from "react-redux";
 import { login } from "../../../store/features/userLogin/userLoginSlice";
 import Cookies from 'js-cookie';
+import { useEffect, useState } from "react";
 
 export const Nav = () => {
+    const [isLogged, setIsLogged] = useState(() => Cookies.get('logged') === 'true')
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const userLogin = useSelector((state: RootState) => state.userLogin)
-    const isLogged = Cookies.get('logged')
+
+    useEffect(() => {
+    setIsLogged(Cookies.get('logged') === 'true')
+    }, [])
 
     const handleLogout = () => {
         Cookies.remove('logged');
+        setIsLogged(false)
         dispatch(login(false))
     }
 
